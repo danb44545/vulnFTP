@@ -35,4 +35,17 @@ Command Line Options (LINKFLAGS)
 # vulnserver DLL
 Need this piece in order to have a non SEH always loads at the same memory location piece
 
+# Compilation options: same as above
+# Assembler Options: same
+# Linker options
+Debug information: Codeview
+Subsystem type: Windows
+Library and object files: kernel32.lib user32.lib gdi32.lib comctl32.lib comdlg32.lib advapi32.lib delayimp.lib
+Machine: x86
+Base Address: 0x64101000
+Command Line Options (LINKFLAGS)
+-subsystem:windows -machine:x86 -base:0x64101000 -dll /SAFESEH:No kernel32.lib user32.lib gdi32.lib comctl32.lib comdlg32.lib advapi32.lib delayimp.lib
+
+
+
 
